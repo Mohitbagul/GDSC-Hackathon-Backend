@@ -1,0 +1,8 @@
+# MongoDB Atlas
+# MONGO_URI=mongodb+srv://<username>:<password>@cluster0.gboe8vg.mongodb.net/hospital_management_db
+
+
+# JWT
+# JWT_SECRET=##############
+# JWT_ALGORITHM=HS256
+# JWT_EXPIRE_MINUTES=60
