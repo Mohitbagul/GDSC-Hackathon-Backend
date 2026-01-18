@@ -11,3 +11,9 @@ class UserCreate(BaseModel):
     password: str
     role: str
     hospital_id: str
+
+
+class HospitalAdminCreate(BaseModel):
+    email: str
+    password: str
+    hospital_id: str

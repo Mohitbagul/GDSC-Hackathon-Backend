@@ -6,4 +6,6 @@ class Appointment:
     token_number: int             # required
 
     status: str = "BOOKED"        # BOOKED / COMPLETED / CANCELLED
+    prescription: list | None = None  # optional - list of prescription items
+    note: str | None = None       # optional - appointment note
     created_by: str | None = None

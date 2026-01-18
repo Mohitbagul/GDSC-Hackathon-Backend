@@ -24,6 +24,6 @@ async def create_patient(
     return {"patient_id": patient_id}
 
 
-@router.get("/", dependencies=[Depends(require_roles("RECEPTIONIST", "DOCTOR"))])
+@router.get("/", dependencies=[Depends(require_roles("RECEPTIONIST", "DOCTOR","HOSPITAL_ADMIN"))])
 async def list_patients(current_user=Depends(get_current_user)):
     return await get_patients_service(current_user["hospital_id"])

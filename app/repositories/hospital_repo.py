@@ -15,3 +15,13 @@ async def get_hospital_by_id(hospital_id: str):
         hospital["id"] = str(hospital["_id"])
         del hospital["_id"]
     return hospital
+
+
+async def get_all_hospitals():
+    hospitals = []
+    cursor = hospital_collection.find({"is_active": True})
+    async for hospital in cursor:
+        hospital["id"] = str(hospital["_id"])
+        del hospital["_id"]
+        hospitals.append(hospital)
+    return hospitals
